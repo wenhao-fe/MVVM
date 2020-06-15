@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVVM.js</title>
+    <script src="./MVVM.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      compile:{{msg}}
+      <div>
+        <div>
+          v-html
+          <div v-html="test"></div>
+        </div>
+        {{text}}
+      </div>
+      <input type="text" v-model="modeldata" />
+      {{modeldata}}
+    </div>
+  </body>
+  <script>
+    let vm = new MVVM({
+      el: "#app",
+      data: {
+        msg: "hello world!",
+        text: "hahhahaha",
+        test: "test",
+        modeldata: "modeldata"
+      }
+    });
+    setTimeout(() => {
+      vm.$options.data.msg;
+      vm.$options.data.msg = "change data";
+      vm.$options.data.text = "change data!!!";
+      console.log("timeOut");
+    }, 3000);
+  </script>
+</html>
