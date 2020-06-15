@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MVVM.js</title>
-    <script src="./MVVM.js"></script>
+    <!-- <script src="./defineProperty.js"></script> -->
+    <script src="./proxy.js"></script>
   </head>
   <body>
     <div id="app">
       compile:{{msg}}
       <div>
         <div>
-          v-html
           <div v-html="test"></div>
         </div>
-        {{text}}
       </div>
       <input type="text" v-model="modeldata" />
       {{modeldata}}
